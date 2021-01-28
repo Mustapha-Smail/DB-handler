@@ -1,0 +1,58 @@
+<%- include("partials/header"); -%>
+<form action="/" method="post">
+  <div class="input-group mb-3 search-bar">
+    <input type="text" class="form-control " placeholder="Client's Last Name" name="wantedClientName">
+    <div class="input-group-append">
+      <button class="btn btn-primary" type="submit" style="height: 50px" >Search</button>
+    </div>
+  </div>
+</form>
+
+
+    <% if(clientsList.length>0){ %>
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Date naissance</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Num. Tél</th>
+          </tr>
+        </thead>
+      <tbody>
+      <%clientsList.forEach( client => { %>
+        <div class="item">
+          <tr>
+            <td class="buttons-edit-delete">
+              <form id="delete" action="/delete" method="post">
+                <button class="delete-button" onClick="this.form.submit()">
+                  <i class="fa fa-trash" ></i>
+                  </button>
+                <input type="hidden" name="deleteClient" value="<%= client._id %>"> </input>
+              </form>
+              <form id="edit" action="/edit" method="post">
+                <button class="edit-button" onClick="this.form.submit()">
+                  <i class="fa fa-pencil" ></i>
+                </button>
+                <input type="hidden" name="editClientId" value="<%= client._id %>"> </input>
+              </form>
+            </td>
+              <td><%= client.lName %></td>
+              <td><%= client.fName %></td>
+              <td><%= client.bDay %></td>
+              <td><%= client.email %></td>
+              <td><%= client.numTel %></td>
+          </tr>
+        </div>
+    <% })%>
+    <% } else{ %>
+      <p class="empty-db">Empty Database.</p>
+    <% } %>
+  </tbody>
+</table>
+
+
+
+<%- include("partials/footer"); -%>

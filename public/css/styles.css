@@ -1,0 +1,118 @@
+html{
+  height: 100%;
+}
+
+body{
+  background-color: #dfe4ea;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  position: relative;
+  margin: 0;
+  padding-bottom: 2rem;
+  min-height: 100%;
+}
+
+a img{
+  margin-left: 7%;
+}
+
+footer {
+  background-color: #4a69bd;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+footer p {
+  text-align: center;
+	font-size: 12px;
+  margin: 5px 0;
+  color: #fff;
+}
+
+nav {
+  background-color: #4a69bd;
+  height: 80px;
+  width: 100%;
+}
+
+nav a{
+  color: white;
+}
+
+td button {
+    background-color: inherit;
+    color: #57606f;
+    background-repeat:no-repeat;
+    border: none;
+}
+
+td .delete-button:hover{
+  color: #eb2f06;
+}
+
+td .edit-button:hover{
+  color: #f1c40f;
+}
+
+h1{
+  text-align: center;
+  font-size:40px;
+  padding-top: 0;
+  padding-bottom: 10px;
+  color: #4a69bd;
+}
+
+.add-button{
+  margin-left: 95%;
+  position: absolute;
+}
+
+.fa-plus-square{
+  font-size:48px;
+}
+
+.add{
+  background: #dfe4ea;
+  color: #fff;
+  border-radius: 50%;
+  width: 120px;
+  height: 60px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.container{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.search-bar {
+  width: 500px;
+  height: 50px;
+  margin: auto;
+}
+
+.form-container{
+  width: 50%;
+  margin: auto;
+}
+
+form .btn-primary{
+  background-color: #4a69bd;
+}
+
+form .btn-primary:hover{
+  background-color: #1e90ff;
+}
+
+td form{
+  display: inline;
+}
+
+.empty-db{
+  color: #1e272e;
+  padding-top: 50px;
+  font-size: 28px;
+  text-align: center;
+}

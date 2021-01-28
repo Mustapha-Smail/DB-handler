@@ -1,0 +1,31 @@
+<%- include("partials/header"); -%>
+<h1>Modifier les données du client</h1>
+<div class="form-container">
+  <form action="/changeClient" method="post">
+    <div class="mb-3">
+      <label for="lName" class="form-label">Nom*</label>
+      <input type="text" class="form-control" name="lName" value="<%= clientEdit.lName %>" required readonly>
+    </div>
+    <div class="mb-3">
+      <label for="fName" class="form-label">Prénom*</label>
+      <input type="text" class="form-control" name="fName" value="<%= clientEdit.fName %>" required readonly>
+    </div>
+    <div class="mb-3">
+      <label for="birthDay" class="form-label">Date de naissance</label>
+      <input type="date" class="form-control" name="birthDay" value="<%= clientEdit.bDay %>">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" value="<%= clientEdit.email %>">
+    </div>
+    <div class="mb-3">
+      <label for="numTel" class="form-label">Numéro de Téléphone</label>
+      <input type="tel" class="form-control" name="numTel" value="<%= clientEdit.numTel %>">
+    </div>
+    <small class="form-text text-muted">* Obligatoire</small><br /><br />
+    <input type="hidden" name="clientId" value="<%= clientEdit._id %>">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<%- include("partials/footer"); -%>

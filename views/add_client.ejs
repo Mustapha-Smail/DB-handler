@@ -1,0 +1,30 @@
+<%- include("partials/header"); -%>
+<h1>Ajouter un nouveau client.</h1>
+<div class="form-container">
+  <form action="/add" method="post">
+    <div class="mb-3">
+      <label for="lName" class="form-label">Nom*</label>
+      <input type="text" class="form-control" name="lName" required>
+    </div>
+    <div class="mb-3">
+      <label for="fName" class="form-label">Prénom*</label>
+      <input type="text" class="form-control" name="fName" required>
+    </div>
+    <div class="mb-3">
+      <label for="birthDay" class="form-label">Date de naissance</label>
+      <input type="date" class="form-control" name="birthDay">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="numTel" class="form-label">Numéro de Téléphone</label>
+      <input type="tel" class="form-control" name="numTel">
+    </div>
+    <small class="form-text text-muted">* Obligatoire</small><br /><br />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<%- include("partials/footer"); -%>
