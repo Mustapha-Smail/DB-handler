@@ -27,16 +27,17 @@
           <tr>
             <td class="buttons-edit-delete">
               <form id="delete" action="/delete" method="post">
+                <input type="hidden" name="_method" value="DELETE">
                 <button class="delete-button" onClick="this.form.submit()">
                   <i class="fa fa-trash" ></i>
                   </button>
-                <input type="hidden" name="deleteClient" value="<%= client._id %>"> </input>
+                <input type="hidden" name="deleteClient" value="<%= client._id %>">
               </form>
               <form id="edit" action="/edit" method="post">
                 <button class="edit-button" onClick="this.form.submit()">
                   <i class="fa fa-pencil" ></i>
                 </button>
-                <input type="hidden" name="editClientId" value="<%= client._id %>"> </input>
+                <input type="hidden" name="editClientId" value="<%= client._id %>">
               </form>
             </td>
               <td><%= client.lName %></td>
